@@ -51,23 +51,23 @@ def load_faces(directory):
 # Function to load dataset from directories
 def load_dataset(parent_directory):
 
-    X, y = [], []
+    x, y = [], []
     for directory in Path(parent_directory).iterdir():
         if directory.is_dir():
             faces = load_faces(directory)
             labels = [directory.name] * len(faces)
-            X.extend(faces)
+            x.extend(faces)
             y.extend(labels)
-    return np.array(X), np.array(y)
+    return np.array(x), np.array(y)
 
 
 
 # Load and save datasets
-trainX, trainy = load_dataset(train_dir)
-print(f"Training faces: {trainX.shape}, labels: {trainy.shape}")
+trainx, trainy = load_dataset(train_dir)
+print(f"Training faces: {trainx.shape}, labels: {trainy.shape}")
 
-testX, testy = load_dataset(test_dir)
-print(f"Testing faces: {testX.shape}, labels: {testy.shape}")
+testx, testy = load_dataset(test_dir)
+print(f"Testing faces: {testx.shape}, labels: {testy.shape}")
 
-np.savez_compressed(BASE_DIR / "processed_faces.npz", trainX=trainX, trainy=trainy, testX=testX, testy=testy)
+np.savez_compressed(BASE_DIR / "processed_faces.npz", trainx=trainx, trainy=trainy, testx=testx, testy=testy)
 print("Dataset saved to 'processed_faces.npz'")
