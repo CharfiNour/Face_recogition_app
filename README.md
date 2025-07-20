@@ -1,1 +1,1 @@
-# Face_recogition_app
+# Face_recognition_app
