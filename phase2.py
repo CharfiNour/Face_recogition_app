@@ -30,5 +30,5 @@ embedded_testX = np.asarray(embedded_testX)
 
 
 BASE_DIR = Path(__file__).resolve().parent
-np.savez_compressed(BASE_DIR / "face_embeddings.npz", trainX=trainX, trainy=trainy, testX=testX, testy=testy)
+np.savez_compressed(BASE_DIR / "face_embeddings.npz", trainX=embedded_trainX, trainy=trainy, testX=embedded_testX, testy=testy)
 print("Embeddings saved to 'face_embeddings.npz'")
