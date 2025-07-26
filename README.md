@@ -1,0 +1,6 @@
+# Face_recognition_app
+Phase 1 focuses on collecting, organizing and preprocessing face images for training a face recognition model, this includes face extraction using the HAAR cascade classifier and saving the preprocessed data in a compressed format.
+
+Phase 2 focuses on generating face embeddings from the preprocessed dataset using the VGG16 model. These embeddings are numerical representations of faces that will be used for the recognition task.
+
+Phase 3 focuses on building, evaluating, and deploying a face recognition model using the embeddings generated in Phase 2. Multiple machine learning classifiers such as Support Vector Machines (SVM), k-Nearest Neighbors (KNN), and Random Forest are trained and evaluated on the face embeddings to identify the best-performing model. The selected model is then saved and integrated into a simple, interactive Streamlit web application. This app allows users to upload a face image, extract features using a pre-trained VGG16 model, and predict the identity of the person in the image using the trained classifier.

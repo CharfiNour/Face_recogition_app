@@ -1,0 +1,8 @@
+numpy
+opencv-python
+tensorflow==2.19.0
+keras
+scikit-learn
+joblib
+Pillow
+streamlit
