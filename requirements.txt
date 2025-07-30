@@ -1,5 +1,5 @@
 streamlit
 opencv-python-headless
 numpy
+tensorflow
 scikit-learn
-keras-facenet
