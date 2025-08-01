@@ -7,7 +7,8 @@ from keras.applications.vgg16 import VGG16, preprocess_input
 from keras.models import Model
 from keras.preprocessing.image import img_to_array
 from pathlib import Path
-
+import warnings
+warnings.filterwarnings("ignore", category=FutureWarning)
 
 st.set_page_config(page_title="Face Recognition", layout="centered")
 st.title("📸 Face Recognition App")
